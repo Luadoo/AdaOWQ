@@ -1,0 +1,867 @@
+/home/xujie-intern/xujie-intern/miniconda/envs/myllm/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/xujie-intern/xujie-intern/miniconda/envs/myllm/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/xujie-intern/xujie-intern/miniconda/envs/myllm/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+OWQ CUDA kernel extension is not installed.
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  4.73it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  8.32it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  7.72it/s]
+Starting AdaOWQ v3 (Adaptive Mixed-Precision OWQ) ...
+Stage 1: Hessian-Activation Sensitivity Profiling...
+Stage 2: Adaptive Budget Allocation (Zero Global Extra Budget)...
+  [AdaOWQ Profiler] Global Base Outliers Total: 1920 | Adaptive Total: 2012
+Stage 3: Quantizing with AdaOWQ Engine...
+Quantizing model.layers.0.self_attn.q_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002521
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.0.self_attn.k_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003010
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.0.self_attn.v_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002668
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.0.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002614
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.0.mlp.up_proj (Allocated Outlier Cols=2)
+    [Tier2 In-place Quant] 2 cols -> 8-bit Fake Quant, rel_err=0.001809
+    [Summary] Outlier total: 3 (Tier1 FP16: 1, Tier2 INT8: 2) | Base INT3: 5117
+Quantizing model.layers.0.mlp.gate_proj (Allocated Outlier Cols=2)
+    [Tier2 In-place Quant] 2 cols -> 8-bit Fake Quant, rel_err=0.001976
+    [Summary] Outlier total: 3 (Tier1 FP16: 1, Tier2 INT8: 2) | Base INT3: 5117
+Quantizing model.layers.0.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002216
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.1.self_attn.q_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002961
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.1.self_attn.k_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003007
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.1.self_attn.v_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003276
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.1.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002485
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.1.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002479
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.1.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002584
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.1.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002534
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.2.self_attn.q_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003082
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.2.self_attn.k_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002921
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.2.self_attn.v_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002989
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.2.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002551
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.2.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002530
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.2.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002566
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.2.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002590
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.3.self_attn.q_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002960
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.3.self_attn.k_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002911
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.3.self_attn.v_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002887
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.3.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002562
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.3.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002582
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.3.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.001824
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.3.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002294
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.4.self_attn.q_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003278
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.4.self_attn.k_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003284
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.4.self_attn.v_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003095
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.4.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002470
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.4.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002506
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.4.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002192
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.4.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002520
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.5.self_attn.q_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003302
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.5.self_attn.k_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003310
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.5.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003514
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.5.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002360
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.5.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002387
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.5.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002613
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.5.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002436
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.6.self_attn.q_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003223
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.6.self_attn.k_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003269
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.6.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003426
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.6.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003077
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.6.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002475
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.6.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002579
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.6.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002405
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.7.self_attn.q_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003219
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.7.self_attn.k_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003240
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.7.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003398
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.7.self_attn.o_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002565
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.7.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002389
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.7.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002100
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.7.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002735
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.8.self_attn.q_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003262
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.8.self_attn.k_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003282
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.8.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003664
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.8.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003054
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.8.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002439
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.8.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002543
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.8.mlp.down_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002338
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 13818
+Quantizing model.layers.9.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003570
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.9.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003638
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.9.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003609
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.9.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002919
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.9.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002401
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.9.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002590
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.9.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003037
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.10.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003675
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.10.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003730
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.10.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003361
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.10.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003005
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.10.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002524
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.10.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002547
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.10.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003168
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.11.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003661
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.11.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003628
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.11.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003556
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.11.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003020
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.11.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002439
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.11.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002576
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.11.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002974
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.12.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003584
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.12.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003624
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.12.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003418
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.12.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002979
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.12.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002532
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.12.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002500
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.12.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003064
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.13.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003622
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.13.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003616
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.13.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003398
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.13.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003027
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.13.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002578
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.13.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.001892
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.13.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002920
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.14.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003636
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.14.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003633
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.14.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003370
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.14.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003086
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.14.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002507
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.14.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.001900
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.14.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003201
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.15.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003606
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.15.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003637
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.15.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003340
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.15.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002969
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.15.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002448
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.15.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002575
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.15.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003099
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.16.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003739
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.16.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003611
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.16.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003366
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.16.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003042
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.16.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002623
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.16.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002453
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.16.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003033
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.17.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003678
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.17.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003676
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.17.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003389
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.17.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002985
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.17.mlp.up_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002615
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.17.mlp.gate_proj (Allocated Outlier Cols=4)
+    [Tier2 In-place Quant] 4 cols -> 8-bit Fake Quant, rel_err=0.002432
+    [Summary] Outlier total: 6 (Tier1 FP16: 2, Tier2 INT8: 4) | Base INT3: 5114
+Quantizing model.layers.17.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003187
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.18.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003705
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.18.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003627
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.18.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003390
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.18.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003090
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.18.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002930
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.18.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002827
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.18.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003003
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.19.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003720
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.19.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003639
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.19.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003765
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.19.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003115
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.19.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002966
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.19.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002917
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.19.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003025
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.20.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003544
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.20.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003639
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.20.self_attn.v_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003386
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 5108
+Quantizing model.layers.20.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003014
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.20.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003027
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.20.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002917
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.20.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003088
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.21.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003714
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.21.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003670
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.21.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003784
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.21.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002968
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.21.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003002
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.21.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002940
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.21.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003108
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.22.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003677
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.22.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003630
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.22.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003804
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.22.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003250
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.22.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002971
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.22.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003017
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.22.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003312
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.23.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003683
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.23.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003639
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.23.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003867
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.23.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003004
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.23.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002991
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.23.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002942
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.23.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003076
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.24.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003711
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.24.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003638
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.24.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003926
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.24.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003021
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.24.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003051
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.24.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003101
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.24.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003005
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.25.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003589
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.25.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003641
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.25.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003890
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.25.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003018
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.25.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003049
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.25.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003101
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.25.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003114
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.26.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003653
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.26.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003640
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.26.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.004017
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.26.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003035
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.26.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002960
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.26.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003054
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.26.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002958
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.27.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003749
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.27.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003835
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.27.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003869
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.27.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003117
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.27.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003019
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.27.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003045
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.27.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002992
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.28.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003951
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.28.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003860
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.28.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003956
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.28.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003324
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.28.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003036
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.28.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003029
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.28.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003166
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.29.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003821
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.29.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003808
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.29.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003905
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.29.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002945
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.29.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003037
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.29.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003089
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.29.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003042
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.30.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003894
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.30.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003815
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.30.self_attn.v_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.004079
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.30.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003003
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.30.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003030
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.30.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003013
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.30.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003160
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.31.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003802
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.31.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003813
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.31.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003862
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.31.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003030
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.31.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003014
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.31.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003076
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.31.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003042
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.32.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003897
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.32.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003790
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.32.self_attn.v_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.004097
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.32.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003030
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.32.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003014
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.32.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003114
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.32.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003036
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.33.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003855
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.33.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003821
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.33.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003886
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.33.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003034
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.33.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003004
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.33.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003007
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.33.mlp.down_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003375
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 13812
+Quantizing model.layers.34.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003871
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.34.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003818
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.34.self_attn.v_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.004134
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.34.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003072
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.34.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003062
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.34.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003132
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.34.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002959
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.35.self_attn.q_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003911
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.35.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003790
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.35.self_attn.v_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.004087
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.35.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003148
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.35.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003050
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.35.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002827
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.35.mlp.down_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003065
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 13815
+Quantizing model.layers.36.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003693
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.36.self_attn.k_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.003821
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.36.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.004003
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.36.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002988
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.36.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003047
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.36.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003072
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.36.mlp.down_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003457
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 13812
+Quantizing model.layers.37.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003819
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.37.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003713
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.37.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003909
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.37.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.002939
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.37.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003008
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.37.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003124
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.37.mlp.down_proj (Allocated Outlier Cols=8)
+    [Tier2 In-place Quant] 8 cols -> 8-bit Fake Quant, rel_err=0.003442
+    [Summary] Outlier total: 12 (Tier1 FP16: 4, Tier2 INT8: 8) | Base INT3: 13812
+Quantizing model.layers.38.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003763
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.38.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003691
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.38.self_attn.v_proj (Allocated Outlier Cols=12)
+    [Tier2 In-place Quant] 13 cols -> 8-bit Fake Quant, rel_err=0.004221
+    [Summary] Outlier total: 18 (Tier1 FP16: 5, Tier2 INT8: 13) | Base INT3: 5102
+Quantizing model.layers.38.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003008
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.38.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003121
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.38.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003073
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.38.mlp.down_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.004036
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 13809
+Quantizing model.layers.39.self_attn.q_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003798
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.39.self_attn.k_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003746
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.39.self_attn.v_proj (Allocated Outlier Cols=10)
+    [Tier2 In-place Quant] 11 cols -> 8-bit Fake Quant, rel_err=0.003851
+    [Summary] Outlier total: 15 (Tier1 FP16: 4, Tier2 INT8: 11) | Base INT3: 5105
+Quantizing model.layers.39.self_attn.o_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003000
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.39.mlp.up_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003123
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.39.mlp.gate_proj (Allocated Outlier Cols=6)
+    [Tier2 In-place Quant] 6 cols -> 8-bit Fake Quant, rel_err=0.003074
+    [Summary] Outlier total: 9 (Tier1 FP16: 3, Tier2 INT8: 6) | Base INT3: 5111
+Quantizing model.layers.39.mlp.down_proj (Allocated Outlier Cols=14)
+    [Tier2 In-place Quant] 15 cols -> 8-bit Fake Quant, rel_err=0.004389
+    [Summary] Outlier total: 21 (Tier1 FP16: 6, Tier2 INT8: 15) | Base INT3: 13803
+Running Time : 1875.3s
+Evaluated Dataset: wikitext2
+Evaluating PPL...
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:01<00:43,  1.11s/it]  5%|▌         | 2/40 [00:02<00:51,  1.36s/it]  8%|▊         | 3/40 [00:04<00:53,  1.43s/it] 10%|█         | 4/40 [00:05<00:52,  1.47s/it] 12%|█▎        | 5/40 [00:07<00:51,  1.49s/it] 15%|█▌        | 6/40 [00:08<00:51,  1.50s/it] 18%|█▊        | 7/40 [00:10<00:49,  1.51s/it] 20%|██        | 8/40 [00:11<00:48,  1.51s/it] 22%|██▎       | 9/40 [00:13<00:47,  1.52s/it] 25%|██▌       | 10/40 [00:14<00:45,  1.52s/it] 28%|██▊       | 11/40 [00:16<00:43,  1.52s/it] 30%|███       | 12/40 [00:17<00:41,  1.49s/it] 32%|███▎      | 13/40 [00:19<00:39,  1.45s/it] 35%|███▌      | 14/40 [00:20<00:38,  1.47s/it] 38%|███▊      | 15/40 [00:22<00:37,  1.49s/it] 40%|████      | 16/40 [00:23<00:36,  1.50s/it] 42%|████▎     | 17/40 [00:25<00:34,  1.51s/it] 45%|████▌     | 18/40 [00:26<00:33,  1.51s/it] 48%|████▊     | 19/40 [00:28<00:31,  1.52s/it] 50%|█████     | 20/40 [00:29<00:30,  1.52s/it] 52%|█████▎    | 21/40 [00:31<00:28,  1.52s/it] 55%|█████▌    | 22/40 [00:32<00:27,  1.52s/it] 57%|█████▊    | 23/40 [00:34<00:25,  1.53s/it] 60%|██████    | 24/40 [00:35<00:24,  1.53s/it] 62%|██████▎   | 25/40 [00:37<00:22,  1.52s/it] 65%|██████▌   | 26/40 [00:38<00:21,  1.52s/it] 68%|██████▊   | 27/40 [00:40<00:19,  1.52s/it] 70%|███████   | 28/40 [00:41<00:17,  1.46s/it] 72%|███████▎  | 29/40 [00:43<00:15,  1.41s/it] 75%|███████▌  | 30/40 [00:44<00:13,  1.37s/it] 78%|███████▊  | 31/40 [00:45<00:12,  1.35s/it] 80%|████████  | 32/40 [00:46<00:10,  1.33s/it] 82%|████████▎ | 33/40 [00:48<00:09,  1.32s/it] 85%|████████▌ | 34/40 [00:49<00:07,  1.31s/it] 88%|████████▊ | 35/40 [00:50<00:06,  1.30s/it] 90%|█████████ | 36/40 [00:52<00:05,  1.29s/it] 92%|█████████▎| 37/40 [00:53<00:03,  1.29s/it] 95%|█████████▌| 38/40 [00:54<00:02,  1.29s/it] 98%|█████████▊| 39/40 [00:55<00:01,  1.29s/it]100%|██████████| 40/40 [00:57<00:00,  1.28s/it]100%|██████████| 40/40 [00:57<00:00,  1.43s/it]
+PPL: 5.1907
+Evaluated Dataset: ptb
+Evaluating PPL...
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:00<00:28,  1.37it/s]  5%|▌         | 2/40 [00:01<00:29,  1.29it/s]  8%|▊         | 3/40 [00:02<00:29,  1.27it/s] 10%|█         | 4/40 [00:03<00:28,  1.25it/s] 12%|█▎        | 5/40 [00:03<00:28,  1.24it/s] 15%|█▌        | 6/40 [00:04<00:27,  1.24it/s] 18%|█▊        | 7/40 [00:05<00:26,  1.24it/s] 20%|██        | 8/40 [00:06<00:25,  1.24it/s] 22%|██▎       | 9/40 [00:07<00:25,  1.24it/s] 25%|██▌       | 10/40 [00:07<00:24,  1.25it/s] 28%|██▊       | 11/40 [00:08<00:23,  1.25it/s] 30%|███       | 12/40 [00:09<00:22,  1.24it/s] 32%|███▎      | 13/40 [00:10<00:21,  1.24it/s] 35%|███▌      | 14/40 [00:11<00:20,  1.24it/s] 38%|███▊      | 15/40 [00:12<00:20,  1.22it/s] 40%|████      | 16/40 [00:12<00:19,  1.23it/s] 42%|████▎     | 17/40 [00:13<00:18,  1.24it/s] 45%|████▌     | 18/40 [00:14<00:17,  1.25it/s] 48%|████▊     | 19/40 [00:15<00:16,  1.25it/s] 50%|█████     | 20/40 [00:16<00:15,  1.25it/s] 52%|█████▎    | 21/40 [00:16<00:15,  1.25it/s] 55%|█████▌    | 22/40 [00:17<00:14,  1.26it/s] 57%|█████▊    | 23/40 [00:18<00:13,  1.26it/s] 60%|██████    | 24/40 [00:19<00:12,  1.26it/s] 62%|██████▎   | 25/40 [00:20<00:11,  1.26it/s] 65%|██████▌   | 26/40 [00:20<00:11,  1.27it/s] 68%|██████▊   | 27/40 [00:21<00:10,  1.29it/s] 70%|███████   | 28/40 [00:22<00:09,  1.28it/s] 72%|███████▎  | 29/40 [00:23<00:08,  1.28it/s] 75%|███████▌  | 30/40 [00:23<00:07,  1.29it/s] 78%|███████▊  | 31/40 [00:24<00:06,  1.29it/s] 80%|████████  | 32/40 [00:25<00:06,  1.29it/s] 82%|████████▎ | 33/40 [00:26<00:05,  1.30it/s] 85%|████████▌ | 34/40 [00:26<00:04,  1.30it/s] 88%|████████▊ | 35/40 [00:27<00:03,  1.30it/s] 90%|█████████ | 36/40 [00:28<00:03,  1.31it/s] 92%|█████████▎| 37/40 [00:29<00:02,  1.31it/s] 95%|█████████▌| 38/40 [00:29<00:01,  1.31it/s] 98%|█████████▊| 39/40 [00:30<00:00,  1.31it/s]100%|██████████| 40/40 [00:31<00:00,  1.31it/s]100%|██████████| 40/40 [00:31<00:00,  1.27it/s]
+PPL: 9.0802
+Evaluated Dataset: c4
+Evaluating PPL...
+  0%|          | 0/40 [00:00<?, ?it/s]  2%|▎         | 1/40 [00:01<01:07,  1.73s/it]  5%|▌         | 2/40 [00:03<01:09,  1.82s/it]  8%|▊         | 3/40 [00:05<01:08,  1.86s/it] 10%|█         | 4/40 [00:07<01:07,  1.87s/it] 12%|█▎        | 5/40 [00:09<01:05,  1.88s/it] 15%|█▌        | 6/40 [00:11<01:03,  1.88s/it] 18%|█▊        | 7/40 [00:13<01:01,  1.88s/it] 20%|██        | 8/40 [00:14<01:00,  1.88s/it] 22%|██▎       | 9/40 [00:16<00:58,  1.87s/it] 25%|██▌       | 10/40 [00:18<00:56,  1.87s/it] 28%|██▊       | 11/40 [00:20<00:54,  1.87s/it] 30%|███       | 12/40 [00:22<00:52,  1.88s/it] 32%|███▎      | 13/40 [00:24<00:50,  1.88s/it] 35%|███▌      | 14/40 [00:26<00:48,  1.87s/it] 38%|███▊      | 15/40 [00:28<00:46,  1.87s/it] 40%|████      | 16/40 [00:29<00:44,  1.87s/it] 42%|████▎     | 17/40 [00:31<00:43,  1.87s/it] 45%|████▌     | 18/40 [00:33<00:41,  1.87s/it] 48%|████▊     | 19/40 [00:35<00:39,  1.87s/it] 50%|█████     | 20/40 [00:37<00:37,  1.87s/it] 52%|█████▎    | 21/40 [00:39<00:35,  1.87s/it] 55%|█████▌    | 22/40 [00:41<00:33,  1.87s/it] 57%|█████▊    | 23/40 [00:42<00:31,  1.87s/it] 60%|██████    | 24/40 [00:44<00:29,  1.87s/it] 62%|██████▎   | 25/40 [00:46<00:27,  1.86s/it] 65%|██████▌   | 26/40 [00:48<00:26,  1.86s/it] 68%|██████▊   | 27/40 [00:50<00:24,  1.86s/it] 70%|███████   | 28/40 [00:52<00:22,  1.88s/it] 72%|███████▎  | 29/40 [00:54<00:20,  1.88s/it] 75%|███████▌  | 30/40 [00:56<00:18,  1.88s/it] 78%|███████▊  | 31/40 [00:58<00:16,  1.88s/it] 80%|████████  | 32/40 [00:59<00:15,  1.88s/it] 82%|████████▎ | 33/40 [01:01<00:13,  1.88s/it] 85%|████████▌ | 34/40 [01:03<00:11,  1.88s/it] 88%|████████▊ | 35/40 [01:05<00:09,  1.88s/it] 90%|█████████ | 36/40 [01:07<00:07,  1.88s/it] 92%|█████████▎| 37/40 [01:09<00:05,  1.88s/it] 95%|█████████▌| 38/40 [01:11<00:03,  1.88s/it] 98%|█████████▊| 39/40 [01:13<00:01,  1.88s/it]100%|██████████| 40/40 [01:14<00:00,  1.88s/it]100%|██████████| 40/40 [01:14<00:00,  1.87s/it]
+PPL: 7.3231
+fake quantized model is saved to /data-model/infer-r1/xujie/my_code/owq/log/llama2-13b-c4-v2_fake.pth
