@@ -10,5 +10,8 @@
 2. CUDA_VISIBLE_DEVICES=5  python zeroshot.py   --model hf-causal-owq   --model_args pretrained=/home/xujie-intern/.cache/huggingface/hub/llama2-7b/snapshots/,load=/data-model/infer-r1/xujie/my_code/owq/log/llama2-7b-v3_fake.pth   --batch_size 4   --tasks  winogrande   --no_cache   --num_fewshot 0
 
 
+## Custom medical datasets
+1. quant_sample_per_task_20.with_task.jsonl
+
 
 [1] Reference: https://github.com/xvyaward/owq/blob/main/README.md
