@@ -13,9 +13,9 @@
 ## Custom medical datasets
 1. quant_sample_per_task_20.with_task.jsonl
 
-
-[1] Reference: https://github.com/xvyaward/owq/blob/main/README.md
+## Reference
+[1] OWQ papers: https://github.com/xvyaward/owq/blob/main/README.md
 
 ## Citation
 If you use this code or method in your research, please cite our manuscript:
-[AdaOWQ], Under Review at PeerJ, 2026.
+[AdaOWQ], Under Review at PeerJ Computer Science, 2026.
