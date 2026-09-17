@@ -15,3 +15,7 @@
 
 
 [1] Reference: https://github.com/xvyaward/owq/blob/main/README.md
+
+## Citation
+If you use this code or method in your research, please cite our manuscript:
+[AdaOWQ], Under Review at PeerJ, 2026.
