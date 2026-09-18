@@ -68,7 +68,7 @@ def layerwise_quantize(model, dataloader, dev, args):
     owq_layers = args.meta['owq_layers']
     ratios = args.meta['ratios']
 
-    # ==================== Step 1: 计算标准 OWQ 基准配额 ====================
+    # ==================== Step 1 ====================
     base_n_out_dict = {}
     if args.target_bit is not None:
         n_owq_layers = sum(owq_layers.values())
@@ -89,7 +89,7 @@ def layerwise_quantize(model, dataloader, dev, args):
         for l in owq_layers:
             base_n_out_dict[l] = 0
 
-    # ==================== Step 2: 多维度敏感度分析 ====================
+    # ==================== Step 2====================
     print("Stage 1: Hessian-Activation Sensitivity Profiling...")
     profiler = AdaOWQProfiler(alpha=0.6, beta=0.4, guarantee_ratio=0.5)
     layer_sensitivities = {}
@@ -130,13 +130,13 @@ def layerwise_quantize(model, dataloader, dev, args):
         del layer
         torch.cuda.empty_cache()
 
-    # ==================== Step 3: 自适应预算分配 ====================
+    # ==================== Step 3 ====================
     print("Stage 2: Adaptive Budget Allocation (Zero Global Extra Budget)...")
     n_out_dict = profiler.allocate_budgets(
         layer_sensitivities, base_n_out_dict, temp=5.0
     )
 
-    # ==================== Step 4: 执行层级量化 ====================
+    # ==================== Step 4====================
     print("Stage 3: Quantizing with AdaOWQ Engine...")
     quantizers = {}
     for i in range(len(layers)):
@@ -153,7 +153,7 @@ def layerwise_quantize(model, dataloader, dev, args):
             gptq_owq = {}
 
             for name in subset:
-                # 获取层自适应调配后的 n_out
+               
                 current_n_out = n_out_dict.get(f"{i}.{name}", base_n_out_dict.get(name, 0))
                 gptq_owq[name] = GPTQ_OWQ(
                     subset[name], n_out=current_n_out,
@@ -178,7 +178,7 @@ def layerwise_quantize(model, dataloader, dev, args):
             for h in handles:
                 h.remove()
 
-            # 弱列排序
+            # weak column
             for name in subset:
                 if not args.no_frob_norm:
                     W = subset[name].weight.data.clone().to(torch.float)
@@ -199,7 +199,7 @@ def layerwise_quantize(model, dataloader, dev, args):
                 )
                 gptq_owq[name].quantizer.out_ids = out_ids
 
-            # 执行量化
+     
             for name in subset:
                 n_allocated = n_out_dict.get(f'{i}.{name}', 0)
                 print(f"Quantizing {meta['prefix']}.{i}.{name} (Allocated Outlier Cols={n_allocated})")
@@ -339,12 +339,12 @@ if __name__ == '__main__':
     parser.add_argument('--target_bit', type=float, default=3.01)
     parser.add_argument('--target_rank', type=int, default=None)
 
-    # ===== AdaOWQ v3 参数 =====
+   
     parser.add_argument('--expansion_factor', type=float, default=1.0, help='Set to 1.0 for standard OWQ export format')
     parser.add_argument('--tier1_ratio', type=float, default=0.5)
     parser.add_argument('--tier2_bits', type=int, default=8)
 
-    # ===== 补齐 OWQ 内部处理依赖的标志位 =====
+   
     parser.add_argument('--fake', action='store_true', help='Save fake quantized checkpoint.')
     parser.add_argument('--packing', action='store_true', help='Whether to save 3bit quantized model.')
     parser.add_argument('--faster', action='store_true', help='Whether to save and load 3bit quantized model using faster kernel.')
