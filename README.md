@@ -1,6 +1,6 @@
-# 1.Title: Adaptive Outlier Allocation Protection for Three-Tier Weight Quantization in Large Language Models
+# 1. Title: Adaptive Outlier Allocation Protection for Three-Tier Weight Quantization in Large Language Models
 
-## This is a submitted paper to the PeerJ Computer Science journal for review. When reviewers request the full code, it will be updated.
+## This is a submitted paper to the PeerJ Computer Science journal for peer review.
 
 # 2. Description:
 
