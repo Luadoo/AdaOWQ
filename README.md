@@ -13,12 +13,8 @@ AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PT
 ### (1)Environment setup
 * conda create -n myllm python=3.10 -y
 * conda activate myllm
-* Python 3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0] on linux Type "help", "copyright", "credits" or "license" for more information.
-* >>> import torch
-* >>> print(torch.__version__)
-* 2.13.0+cu130
-* >>> print(torch.version.cuda)
-* 13.0
+<img width="590" height="140" alt="image" src="https://github.com/user-attachments/assets/0d09be45-f94e-43e2-b90b-e672819ed464" />
+
 
 
 
