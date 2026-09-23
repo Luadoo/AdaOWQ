@@ -11,6 +11,19 @@
 
 # 4. Code Information:
 
+### Environment setup
+conda create -n myllm python=3.10 -y
+conda activate myllm
+<img width="572" height="156" alt="image" src="https://github.com/user-attachments/assets/c3a61d1b-290c-4a19-ae6b-5a54267b2e6d" />
+
+### Install all the dependencies
+pip install -r requirements.txt
+
+### Install CUDA kernel (3/4bit_W x FP16_A)
+cd owq/kernel
+python setup_cuda.py install
+
+
 ## For quantization (Usage Instructions)
 1. CUDA_VISIBLE_DEVICES=4 python main.py  /home/xujie-intern/.cache/huggingface/hub/llama-2-13b-hf/snapshots/v1/  c4 --wbits 3 --target_bit 3.01  --expansion_factor 1.5  --tier1_ratio 0.3  --tier2_bits 8  --act-order  --true-sequential --seed 10000  --fake  --save  /data-model/infer-r1/xujie/my_code/owq/log/llama2-13-3.01-v10.pth 2>&1 | tee /data-model/infer-r1/xujie/my_code/owq/log/213b-3.01-v10.log
 
