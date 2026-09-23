@@ -7,7 +7,7 @@
 
 # 3. Dataset Information:
 ## Custom medical datasets
-1. custom_data.json.gz
+1. custom_data.json.gz (This dataset is from Unisound AI Technology Co., Ltd., Beijing, China, for end-device inference and to protect private user data information)
 
 # 4. Code Information:
 
