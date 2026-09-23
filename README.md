@@ -12,16 +12,17 @@
 # 4. Code Information:
 
 ### (1)Environment setup
-conda create -n myllm python=3.10 -y
-conda activate myllm
-<img width="372" height="156" alt="image" src="https://github.com/user-attachments/assets/c3a61d1b-290c-4a19-ae6b-5a54267b2e6d" />
+* conda create -n myllm python=3.10 -y
+* conda activate myllm
+* <img width="573" height="137" alt="image" src="https://github.com/user-attachments/assets/c602345a-5f5c-48e3-bf0d-f4512dafed9f" />
+
 
 ### (2)Install all the dependencies
 pip install -r requirements.txt
 
 ### (3)Install CUDA kernel (3/4bit_W x FP16_A)
-cd owq/kernel
-python setup_cuda.py install
+* cd owq/kernel
+* python setup_cuda.py install
 
 
 ## For quantization (Usage Instructions)
