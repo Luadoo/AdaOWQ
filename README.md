@@ -11,15 +11,15 @@
 
 # 4. Code Information:
 
-### Environment setup
+### (1)Environment setup
 conda create -n myllm python=3.10 -y
 conda activate myllm
-<img width="572" height="156" alt="image" src="https://github.com/user-attachments/assets/c3a61d1b-290c-4a19-ae6b-5a54267b2e6d" />
+<img width="372" height="156" alt="image" src="https://github.com/user-attachments/assets/c3a61d1b-290c-4a19-ae6b-5a54267b2e6d" />
 
-### Install all the dependencies
+### (2)Install all the dependencies
 pip install -r requirements.txt
 
-### Install CUDA kernel (3/4bit_W x FP16_A)
+### (3)Install CUDA kernel (3/4bit_W x FP16_A)
 cd owq/kernel
 python setup_cuda.py install
 
