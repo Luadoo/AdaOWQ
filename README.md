@@ -31,3 +31,8 @@ Not applicable; we depend on the baseline OWQ [1] paper and do not use any data 
 ## Citation
 If you use this code or method in your research, please cite our manuscript:
 [AdaOWQ], Under Review at PeerJ Computer Science, 2026.
+
+
+## License
+This work is licensed under the MIT License.
+Code provided for peer review of manuscript [Paper ID: #149231].
