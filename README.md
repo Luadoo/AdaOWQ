@@ -24,7 +24,7 @@ pip install -r requirements.txt
 ### (3)Install CUDA kernel (3/4bit_W x FP16_A)
 * cd owq/kernel
 * python setup_cuda.py install
-
+* In our paper's limitations, we clarify that although AdaOWQ reduces memory footprint by physically packing Tier-2 columns into 8-bit integers, executing mixed-precision matrix multiplications (FP16, INT8, and INT3/INT4) in a single layer still requires specialized CUDA/NPU runtime kernels to achieve linear wall-clock latency speedups on real-world edge hardware.
 
 ## For quantization (Usage Instructions)
 1. CUDA_VISIBLE_DEVICES=4 python main.py  /home/xujie-intern/.cache/huggingface/hub/llama-2-13b-hf/snapshots/v1/  c4 --wbits 3 --target_bit 3.01  --expansion_factor 1.5  --tier1_ratio 0.3  --tier2_bits 8  --act-order  --true-sequential --seed 10000  --fake  --save  /data-model/infer-r1/xujie/my_code/owq/log/llama2-13-3.01-v10.pth 2>&1 | tee /data-model/infer-r1/xujie/my_code/owq/log/213b-3.01-v10.log
