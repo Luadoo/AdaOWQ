@@ -10,7 +10,7 @@ AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PT
 
 # 4. Code Information:
 
-### (1)Environment setup
+### (1) Environment setup
 * conda create -n myllm python=3.10 -y
 * conda activate myllm
 *  print(torch.__version__)  2.13.0+cu130
@@ -20,10 +20,10 @@ AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PT
 
 
 
-### (2)Install all the dependencies
+### (2) Install all the dependencies
 pip install -r requirements.txt
 
-### (3)Install CUDA kernel (3/4bit_W x FP16_A)
+### (3) Install CUDA kernel (3/4bit_W x FP16_A)
 * cd owq/kernel
 * python setup_cuda.py install
 * In our paper's limitations, we clarify that although AdaOWQ reduces memory footprint by physically packing Tier-2 columns into 8-bit integers, executing mixed-precision matrix multiplications (FP16, INT8, and INT3/INT4) in a single layer still requires specialized CUDA/NPU runtime kernels to achieve linear wall-clock latency speedups on real-world edge hardware. This is left for future work.
