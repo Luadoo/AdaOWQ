@@ -11,11 +11,7 @@ AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PT
 # 4. Code Information:
 
 ### (1) Environment setup
-* conda create -n myllm python=3.10 -y
-* conda activate myllm
-*  print(torch.__version__)  2.13.0+cu130
 
-<img width="590" height="140" alt="image" src="https://github.com/user-attachments/assets/0d09be45-f94e-43e2-b90b-e672819ed464" />
 
 
 
@@ -29,11 +25,11 @@ pip install -r requirements.txt
 * In our paper's limitations, we clarify that although AdaOWQ reduces memory footprint by physically packing Tier-2 columns into 8-bit integers, executing mixed-precision matrix multiplications (FP16, INT8, and INT3/INT4) in a single layer still requires specialized CUDA/NPU runtime kernels to achieve linear wall-clock latency speedups on real-world edge hardware. This is left for future work.
 
 ## For quantization (Usage Instructions)
-1. CUDA_VISIBLE_DEVICES=4 python main.py  /home/xujie-intern/.cache/huggingface/hub/llama-2-13b-hf/snapshots/v1/  c4 --wbits 3 --target_bit 3.01  --expansion_factor 1.5  --tier1_ratio 0.3  --tier2_bits 8  --act-order  --true-sequential --seed 10000  --fake  --save  /data-model/infer-r1/xujie/my_code/owq/log/llama2-13-3.01-v10.pth 2>&1 | tee /data-model/infer-r1/xujie/my_code/owq/log/213b-3.01-v10.log
+1. 
 
 
 ## For evaluation on zero-shot (Usage Instructions)
-2. CUDA_VISIBLE_DEVICES=5  python zeroshot.py   --model hf-causal-owq   --model_args pretrained=/home/xujie-intern/.cache/huggingface/hub/llama2-13b-hf/snapshots/v1,load=/data-model/infer-r1/xujie/my_code/owq/log/llama2-13-3.01-v10_fake.pth   --batch_size 4   --tasks  winogrande   --no_cache   --num_fewshot 0
+2. 
 
 # 5. Requirements:
 We used Python libraries, and for that version, we have uploaded a requirements file for checking.
