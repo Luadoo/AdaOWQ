@@ -3,7 +3,7 @@
 ## This is a submitted paper to the PeerJ Computer Science journal for peer review.
 
 # 2. Description:
-AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PTQ) framework for Large Language Models. Building upon OWQ, AdaOWQ incorporates activation energy with Hessian sensitivity to dynamically allocate outlier protection budgets across layers, capturing secondary critical channels with an efficient FP16/INT8/INT3-4 precision hierarchy.
+AdaOWQ is an adaptive, three-tier mixed-precision post-training quantization (PTQ) framework for Large Language Models. Building upon OWQ, AdaOWQ incorporates energy activation with Hessian sensitivity to dynamically allocate outlier protection budgets across layers, capturing secondary critical channels with an efficient FP16/INT8/INT3-4 precision hierarchy.
 
 # 3. Dataset Information: (Custom medical datasets)
 * /your file location/utils/custom_data.json.gz (This dataset is from Unisound AI Technology Co., Ltd., Beijing, China, for end-device inference and to protect private user data information)
